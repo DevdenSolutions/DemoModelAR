@@ -43,7 +43,9 @@
 	   
 	   
 	   window.switchSrc = (element, index) => {	
-		const base = "./" + index;
+		
+		const mName = document.getElementById('ModelName').value; 
+		const base = "./" + mName;
 		modelViewer.src = base + '.glb';
 		modelViewer.iosSrc = base + '.usdz';
 		print("entered: " + ModelName + " : " + index);
