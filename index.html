@@ -34,24 +34,21 @@
     >
     </model-viewer>
 	<form>
-		Model Name:<br> <input type="text" name="name">
-		<input type="button" onclick="switchSrc(this,name)" value="Submit">
+		Model Name:<br> <input type="text" name="ModelName">
+		<input type="button" onclick="switchSrc(this,ModelName)" value="Submit">
 	</form>
 	<script type="module">
 	   const modelViewer = document.querySelector("model-viewer");
 	   const div = document.getElementById('annotation'); 
-
+	   
+	   
 	   window.switchSrc = (element, index) => {	
 		const base = "./" + index;
 		modelViewer.src = base + '.glb';
 		modelViewer.iosSrc = base + '.usdz';
-
+		print("entered: " + ModelName + " : " + index);
 	  };
 
-	  document.querySelector(".slider").addEventListener('beforexrselect', (ev) => {
-		// Keep slider interactions from affecting the XR scene.
-		ev.preventDefault();
-	  });
 	</script>
   </body>
 </html>
