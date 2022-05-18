@@ -34,8 +34,8 @@
     >
     </model-viewer>
 	<form>
-		Model Name:<br> <input type="text" name="ModelName">
-		<input type="button" onclick="switchSrc(this,ModelName)" value="Submit">
+		Model Name:<br> <input type="text" name="name", id="ModelName">
+		<input type="button" onclick="switchSrc(this,name)" value="Submit">
 	</form>
 	<script type="module">
 	   const modelViewer = document.querySelector("model-viewer");
